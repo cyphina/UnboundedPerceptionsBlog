@@ -30,23 +30,23 @@
     <div class="flex justify-center pt-3">
         {#if pageNum > 1}
             <div class="bg-blue-300 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-1 shadow">
-                <a href="/?pageNum={pageNum - 1}">Prev</a>
+                <a href="/?page={pageNum - 1}">Prev</a>
             </div>
         {/if}
         {#each makePaginationNums() as index (index)}
             {#if index == pageNum}
                 <div class="bg-blue-300 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-1 shadow">
-                    <a href="/?pageNum={index}">{index}</a>
+                    <a href="/?page={index}">{index}</a>
                 </div>
             {:else}
                 <div class="bg-blue-300 hover:bg-blue-400 text-pink-800 font-bold py-2 px-4 rounded-1 shadow">
-                    <a href="/?pageNum={index}">{index}</a>
+                    <a href="/?page={index}">{index}</a>
                 </div>
             {/if}
         {/each}
         {#if hasMore}
             <div class="bg-blue-300 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-1 shadow">
-                <a href="/?pageNum={pageNum + 1}">Next</a>
+                <a href="/?page={pageNum + 1}">Next</a>
             </div>
         {/if}
     </div>

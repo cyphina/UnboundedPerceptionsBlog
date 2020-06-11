@@ -22,17 +22,7 @@
 </script>
 
 <div class="mx-4 mb-2">
-    <h1>My Weblog</h1>
+    <h1 class="text-4xl my-1">Unbounded Perceptions</h1>
     <Bloglist {posts} {hasMore} {pageNum} {maxPageNum} />
 </div>
 
-<style>
-
-
-    h1 {
-        margin-top: 1em;
-        font-size: 20px;
-        font-weight: bolder;
-        margin-bottom: 1em;
-    }
-</style>

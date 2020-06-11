@@ -30,7 +30,8 @@
     .active {
         color: #d91b42;
         border-bottom: 2px solid #d91b42;
-        padding-bottom: 8px;
+        padding-top: 4px;
+        padding-bottom: 4px;
     }
     li {
         margin: 0 16px;
