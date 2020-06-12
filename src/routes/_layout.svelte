@@ -1,6 +1,8 @@
 <script>
-    // export let segment
     import Navbar from '../components/Navbar.svelte';
+    import Breadcrumb from '../components/Breadcrumb.svelte';
+    import { stores } from '@sapper/app';
+    const { page } = stores();
 </script>
 
 <svelte:head>
@@ -9,6 +11,7 @@
 
 <main>
     <Navbar />
+    <Breadcrumb sitePath="{$page.path}" />
     <slot />
 </main>
 

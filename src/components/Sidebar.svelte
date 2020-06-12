@@ -1,7 +1,7 @@
 <script>
     import { slide } from 'svelte/transition';
     import { linear } from 'svelte/easing';
-    let options = { duration: 1000, easing: linear };
+    let options = { duration: 600, easing: linear };
     export let open;
 </script>
 

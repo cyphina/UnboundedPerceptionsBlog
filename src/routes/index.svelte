@@ -17,8 +17,6 @@
     import Bloglist from '../components/Bloglist.svelte';
     export let posts, hasMore, pageNum, maxPageNum;
     import { stores } from '@sapper/app';
-    const { page } = stores();
-    console.log($page);
 </script>
 
 <div class="mx-4 mb-2">

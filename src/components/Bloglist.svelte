@@ -1,9 +1,11 @@
 <script>
+    import Card from './Card.svelte';
     export let posts, hasMore, pageNum, maxPageNum;
 
     /** Max number of elements to surround our pageNum on both sides */
     const maxPageNumsPagination = 7;
     const maxPaginationWidth = 3;
+    const postRows = 3;
 
     function makePaginationNums() {
         let nums = Array.from({ length: maxPageNumsPagination }, (_, i) => i);
@@ -18,14 +20,16 @@
 </script>
 
 <main class>
-    {#each posts as post}
-        <article class="bg-red-200 mb-2">
-            <a href="{`/posts/${post.permalink}`}">
-                <h2>{post.title}</h2>
-                <p>{post.summary}</p>
-            </a>
-        </article>
-    {/each}
+    <!-- Create a row in each column -->
+    <div class="flex flex-col">
+        {#each Array(postRows) as _, index}
+            <div class="flex flex-row justify-around">
+                {#each posts.slice(index * postRows, (index + 1) * postRows) as post}
+                    <Card title="{post.title}" summary="{post.summary}" link="{`/Posts/${post.permalink}`}" />
+                {/each}
+            </div>
+        {/each}
+    </div>
 
     <div class="flex justify-center pt-3">
         {#if pageNum > 1}

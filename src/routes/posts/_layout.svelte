@@ -1,5 +1,5 @@
 <script>
-    // export let segment
+
 </script>
 
 <main class="bg-green m-2">
