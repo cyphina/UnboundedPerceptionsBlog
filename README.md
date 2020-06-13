@@ -1,0 +1,1 @@
+This is a blog I'm making to update about my game and story writing.
