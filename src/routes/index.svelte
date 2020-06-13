@@ -24,3 +24,9 @@
     <Bloglist {posts} {hasMore} {pageNum} {maxPageNum} />
 </div>
 
+<style>
+    h1 {
+        font-weight: bold;
+        text-shadow: 4px 4px 4px #aaa;
+    }
+</style>

@@ -15,5 +15,7 @@
 </script>
 
 <h1>{post.title}</h1>
+<main class="text-sm">
+    {@html post.html}
+</main>
 
-{@html post.html}

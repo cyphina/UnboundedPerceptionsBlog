@@ -1,19 +1,24 @@
 <script>
     import Navbar from '../components/Navbar.svelte';
     import Breadcrumb from '../components/Breadcrumb.svelte';
+    import Footer from '../components/Footer.svelte';
     import { stores } from '@sapper/app';
     const { page } = stores();
 </script>
 
 <svelte:head>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet" />
 </svelte:head>
 
-<main>
-    <Navbar />
-    <Breadcrumb sitePath="{$page.path}" />
-    <slot />
-</main>
+<div class="flex flex-col min-h-screen w-screen">
+    <main class="flex-grow w-screen">
+        <Navbar />
+        <Breadcrumb sitePath="{$page.path}" />
+        <slot />
+    </main>
+    <Footer />
+</div>
 
 <style>
     main {
@@ -30,5 +35,6 @@
     :global(body) {
         background-image: url('/images/aridukacat.jpg');
         background-size: 100% auto;
+        font-family: 'Comfortaa', cursive;
     }
 </style>
