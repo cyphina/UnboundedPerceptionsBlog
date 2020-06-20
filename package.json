@@ -18,7 +18,8 @@
     "polka": "next",
     "rollup-plugin-glob": "^1.0.2",
     "sirv": "^0.4.0",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "vercel-sapper": "^0.41.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

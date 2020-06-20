@@ -60,7 +60,7 @@
 </main>
 
 <style>
-.cssAdjustHeight {
-    height: 32em;
-}
+    .cssAdjustHeight {
+        height: 32em;
+    }
 </style>
