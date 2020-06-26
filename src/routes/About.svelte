@@ -9,8 +9,8 @@
 
     <main>
         <p>
-            My name is Nam Ha aka Zi and this my site. This site will contain useful information about my game, and it
-            serves as a place I can write some of my thoughts and describe my current work. Currently I work on my game
+            My name is Nam Ha aka Zi. This site will contain useful information about my game, and it serves as a place
+            I can write some of my thoughts and describe my current work. Currently I work on my game
             <b>Unbounded Perceptions (Up)</b>
             alone. I am trying to keep my skills narrowed down to working on gameplay systems, tools, and the story for
             my game so that I can finish before dying because this story is getting quite long.
@@ -42,35 +42,16 @@
         </p>
 
         <p>
-            It is lonely to consider feelings and kindness into our actions, but it brings its own strength, or so I
-            hope to show in my story.
+            <b>
+                It is lonely to consider feelings and kindness into our actions, but it brings its own strength (or so I
+                hope to show in my story).
+            </b>
         </p>
     </main>
-    <div>
-        <h1 class="text-red-500 text-2xl font-extrabold border-b border-red-500">Contact Zi Ha At...</h1>
-        <address>
-            <ul class="mx-5 mt-2 list-decimal">
-                <li>For friendly chat - cyphina@gmail.com</li>
-                <li>For something business oriented - z.nam.ky.ha@gmail.com</li>
-                <li>For something you want me to see 100% - Add Cyphina on Epic Games Launcher</li>
-                <li>
-                    To see my projects:
-                    <a href="https://github.com/cyphina/UnboundedPerceptions">My Github</a>
-                </li>
-            </ul>
-        </address>
-    </div>
 </div>
 
 <style>
-    li {
-        margin-bottom: 0.2em;
-    }
     p {
         margin: 1em;
-    }
-    a {
-        color: #0a3b08;
-        background-color: aquamarine;
     }
 </style>

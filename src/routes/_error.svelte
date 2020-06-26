@@ -13,7 +13,7 @@
 </svelte:head>
 
 {#if status === 404}
-    There is no page mapped to {$page.path}
+    There is no page mapped to {$page.path}... YET!
 {:else}
     <h1>Status: {status}</h1>
 

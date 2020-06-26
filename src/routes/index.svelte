@@ -1,6 +1,6 @@
 <script>
     import Gallery from '../components/Gallery.svelte';
-    import slides from '../../static/images/MainPageGallery/*.png';
+    import slides from '../../static/images/mainpagegallery/*.png';
 </script>
 
 <div class="mx-4">

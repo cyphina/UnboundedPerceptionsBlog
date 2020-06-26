@@ -1,9 +1,9 @@
 <script>
     import { fade } from 'svelte/transition';
     import { tweened } from 'svelte/motion';
-    import { bounceInOut, cubicInOut } from 'svelte/easing';
+    import { cubicInOut } from 'svelte/easing';
 
-    const pictureOpacityStore = tweened(1, { duration: 300, easing: bounceInOut });
+    const pictureOpacityStore = tweened(1, { duration: 300, easing: cubicInOut });
 
     export let slides = [];
     let bShowGalleryNav = false;
@@ -20,7 +20,7 @@
     function onGalleryPictureChange() {
         // Create a litte fade in effect
         pictureOpacityStore.set(0, { duration: 0 });
-        $pictureOpacityStore = 1;
+        pictureOpacityStore.set(1, { duration: 1000, easing: cubicInOut });
     }
 </script>
 
