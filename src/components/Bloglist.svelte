@@ -34,25 +34,33 @@
 
     <div class="flex justify-center pt-3">
         {#if pageNum > 1}
-            <div class="bg-indigo-200 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-1 shadow">
-                <a href="/?page={pageNum - 1}" sapper-noscroll>Prev</a>
-            </div>
+            <a href="Blog/?page={pageNum - 1}" sapper-noscroll>
+                <div class="bg-indigo-400 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-1 shadow">
+                    Prev
+                </div>
+            </a>
         {/if}
         {#each makePaginationNums() as index (index)}
             {#if index == pageNum}
-                <div class="bg-indigo-200 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-1 shadow">
-                    <a href="/?page={index}" sapper-noscroll>{index}</a>
-                </div>
+                <a href="Blog/?page={index}" sapper-noscroll>
+                    <div class="bg-indigo-400 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-1 shadow">
+                        {index}
+                    </div>
+                </a>
             {:else}
-                <div class="bg-indigo-200 hover:bg-blue-400 text-pink-800 font-bold py-2 px-4 rounded-1 shadow">
-                    <a href="/?page={index}" sapper-noscroll>{index}</a>
-                </div>
+                <a href="Blog/?page={index}" sapper-noscroll>
+                    <div class="bg-indigo-400 hover:bg-blue-400 text-pink-800 font-bold py-2 px-4 rounded-1 shadow">
+                        {index}
+                    </div>
+                </a>
             {/if}
         {/each}
         {#if hasMore}
-            <div class="bg-indigo-200 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-1 shadow">
-                <a href="/?page={pageNum + 1}" sapper-noscroll>Next</a>
-            </div>
+            <a href="Blog/?page={pageNum + 1}" sapper-noscroll>
+                <div class="bg-indigo-400 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-1 shadow">
+                    Next
+                </div>
+            </a>
         {/if}
     </div>
 
