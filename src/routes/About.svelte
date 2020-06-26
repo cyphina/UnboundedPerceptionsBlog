@@ -54,7 +54,7 @@
                 <li>For something business oriented - z.nam.ky.ha@gmail.com</li>
                 <li>For something you want me to see 100% - Add Cyphina on Epic Games Launcher</li>
                 <li>
-                    To see my projects: 
+                    To see my projects:
                     <a href="https://github.com/cyphina/UnboundedPerceptions">My Github</a>
                 </li>
             </ul>
@@ -68,5 +68,9 @@
     }
     p {
         margin: 1em;
+    }
+    a {
+        color: #0a3b08;
+        background-color: aquamarine;
     }
 </style>

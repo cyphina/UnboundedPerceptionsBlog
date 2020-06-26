@@ -26,7 +26,7 @@
         {#each Array(postRows) as _, index}
             <div class="flex flex-row justify-around">
                 {#each posts.slice(index * postRows, (index + 1) * postRows) as post}
-                    <Card title="{post.title}" summary="{post.summary}" link="{`/Posts/${post.permalink}`}" />
+                    <Card title="{post.title}" summary="{post.summary}" link="{`/posts/${post.permalink}`}" />
                 {/each}
             </div>
         {/each}

@@ -24,14 +24,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 0.3em;
+        margin-left: 0.3em auto;
         list-style-type: none;
+        height: 100%;
     }
     .active {
         color: #d91b42;
         border-bottom: 2px solid #d91b42;
-        padding-top: 4px;
-        padding-bottom: 4px;
     }
     li {
         margin: 0 16px;

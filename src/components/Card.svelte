@@ -3,7 +3,7 @@
 
     export let title; // Quick blog title
     export let summary; // Quick block discription
-    export let tags = [];
+    // export let tags = [];
     export let link;
 </script>
 

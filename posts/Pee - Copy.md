@@ -35,3 +35,4 @@ You can play a demo online at https://cyphina.itch.io/unbounded-perceptions. I m
 ## Next steps
 
 I kind of need to find some other work now so I may put development on hold. I'll still be working on my story and such. I'll focus on building a website for myself and maybe upload the story there. I'll also work on another app this time maybe to make quests. Maybe I'll make it so the quest app could be used on mobile so you can make quest data in your bed.
+

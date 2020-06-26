@@ -8,7 +8,5 @@
 </main>
 
 <style>
-    main {
 
-    }
 </style>
