@@ -1,7 +1,7 @@
 <script>
     export let sitePath = '/';
 
-    const invisibleRoutes = ['Posts']; // Routes we don't want to show in the breadcrumbs
+    const invisibleRoutes = ['posts']; // Routes we don't want to show in the breadcrumbs
 
     // Splits the path up into names that we can display
     function createBreadCrumbsFromPath(newPath) {

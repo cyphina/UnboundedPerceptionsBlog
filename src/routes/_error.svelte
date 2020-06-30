@@ -1,5 +1,6 @@
 <script>
     import { stores } from '@sapper/app';
+    import Tailwindcss from './Tailwindcss.svelte';
     const { page, preloading, session } = stores();
 
     export let status;
@@ -13,7 +14,7 @@
 </svelte:head>
 
 {#if status === 404}
-    There is no page mapped to {$page.path}... YET!
+    <p>There is no page mapped to {$page.path}... YET!</p>
 {:else}
     <h1>Status: {status}</h1>
 

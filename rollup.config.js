@@ -5,13 +5,13 @@ import commonjs from '@rollup/plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
-import autoPreprocess from 'svelte-preprocess';
 import config from 'sapper/config/rollup.js';
 import path from 'path';
 import pkg from './package.json';
 import markdown from '@jackfranklin/rollup-plugin-markdown';
 import glob from 'rollup-plugin-glob';
 import image from '@rollup/plugin-image';
+import sveltePreprocess from 'svelte-preprocess';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -35,7 +35,7 @@ export default {
             }),
             svelte({
                 dev,
-                preprocess: autoPreprocess(),
+                preprocess: sveltePreprocess({ postcss: true }),
                 hydratable: true,
                 emitCss: true,
             }),
@@ -92,6 +92,7 @@ export default {
             }),
             svelte({
                 generate: 'ssr',
+                preprocess: sveltePreprocess({ postcss: true }),
                 dev,
             }),
             resolve({

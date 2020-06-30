@@ -14,8 +14,6 @@
     export let post;
 </script>
 
-<h1>{post.title}</h1>
-<main class="text-sm">
-    {@html post.html}
-</main>
-
+<h1 class="font-bold mb-4 text-center text-5xl">{post.title}</h1>
+<h3 class="italic mb-4 text-center text-base">{post.date}</h3>
+{@html post.html}

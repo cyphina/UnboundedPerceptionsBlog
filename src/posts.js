@@ -11,14 +11,26 @@ function transform({ filename, html, metadata }) {
 }
 
 const chunk = (input, size) => {
+    // Reducer takes 4 arguments, accumlator, current value, current index (optional), src array (optional)
+    // Reducer's return value is assigned to accumulator whose value is rembmered across each iteration and becomes the single fina lvalue
     return input.reduce((arr, item, idx) => {
         return idx % size === 0 ? [...arr, [item]] : [...arr.slice(0, -1), [...arr.slice(-1)[0], item]];
     }, []);
 };
 
-export const posts = all.map(transform).sort((date) => {
-    return (a, b) => (a[date] > b[date] ? 1 : b[key] > a[key] ? -1 : 0);
+export const posts = all.map(transform).sort((a, b) => {
+    if (a.date < b.date) {
+        return 1;
+    }
+    if (a.date == b.date) {
+        if (a.filename < b.filename) {
+            return -1;
+        } else return 0;
+    }
+    return -1;
 });
+
+//posts.forEach((e) => console.log(e.date));
 
 export const postsPerPage = 9;
 export const pages = chunk(posts, postsPerPage);

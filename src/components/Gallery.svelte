@@ -2,12 +2,16 @@
     import { fade } from 'svelte/transition';
     import { tweened } from 'svelte/motion';
     import { cubicInOut } from 'svelte/easing';
+    import Modal from './Modal.svelte';
 
+    // Gallery vars
     const pictureOpacityStore = tweened(1, { duration: 300, easing: cubicInOut });
-
     export let slides = [];
     let bShowGalleryNav = false;
     let curImgIndex = 0;
+
+    // Dialog vars
+    let modalRef; // A reference to the popup modal we pass into the modal component. The modal component then binds it to the correct element.
 
     function changeViewingImage(newIndex) {
         curImgIndex = newIndex;
@@ -31,12 +35,14 @@
 >
 
     <div>
-        <img
-            src="{slides[curImgIndex]}"
-            alt="Missing"
-            class="slide absolute top-0 object-cover h-full w-full"
-            style="opacity: {$pictureOpacityStore}"
-        />
+        <button on:click="{() => modalRef.showModal()}">
+            <img
+                src="{slides[curImgIndex]}"
+                alt="Missing"
+                class="slide absolute top-0 object-cover h-full w-full"
+                style="opacity: {$pictureOpacityStore}"
+            />
+        </button>
     </div>
 
     {#if bShowGalleryNav}
@@ -60,6 +66,14 @@
         </div>
     {/if}
 </div>
+
+<Modal title="Closer Up Image" bind:modalRef>
+    <img
+        src="{slides[curImgIndex]}"
+        alt="Missing"
+        class="object-cover h-full w-full"
+    />
+</Modal>
 
 <style>
     .gallery {

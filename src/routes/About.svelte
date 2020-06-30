@@ -1,6 +1,6 @@
 <div class="m-2">
     <div class="rounded-lg bg-gray-100 border border-gray-900 text-blue-500 text-lg mx-2 my-4 text-center">
-        <h1 class="italic my-2">
+        <h1 class="italic p-4 m-4 border-b border-gray-300">
             Innocence is not the ignorance of all reality, it is one who seeks the truth and accepts others despite
             everything
         </h1>
@@ -51,7 +51,10 @@
 </div>
 
 <style>
+    h1 {
+        font-size: 1.2rem;
+    }
     p {
-        margin: 1em;
+        margin: 1rem;
     }
 </style>

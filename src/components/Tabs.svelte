@@ -24,7 +24,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 0.3em auto;
+        margin-top: 0rem;
+        padding: 0rem 0.3rem;
         list-style-type: none;
         height: 100%;
     }
@@ -33,9 +34,9 @@
         border-bottom: 2px solid #d91b42;
     }
     li {
-        margin: 0 16px;
         font-size: 18px;
         color: #777;
+        margin: 0rem 0.5rem;
         cursor: pointer;
     }
 </style>

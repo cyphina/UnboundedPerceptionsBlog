@@ -1,11 +1,12 @@
 <script>
     import Gallery from '../components/Gallery.svelte';
     import slides from '../../static/images/MainPageGallery/*.png';
+    import Tailwindcss from './Tailwindcss.svelte';
 </script>
 
 <div class="mx-4">
-    <h1 class="text-4xl my-1 border-b border-black">Unbounded Perceptions</h1>
-    <h2 class="text-center text-2xl mt-2">Welcome to my Site!</h2>
+    <h1 class="text-7xl text-center my-1 border-b border-black">Unbounded Perceptions</h1>
+    <h2 class="text-center text-2xl my-4">Welcome to my Site!</h2>
     <div class="mt-1 mb-4 mx-8 border-solid border border-gray-200">
         <Gallery {slides} />
     </div>

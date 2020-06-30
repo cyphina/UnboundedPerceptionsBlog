@@ -7,7 +7,6 @@
 </script>
 
 <svelte:head>
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet" />
 </svelte:head>
 
@@ -30,11 +29,5 @@
         border-width: 0.1em;
         box-shadow: 0em 0em 0.3em black;
         border-color: black;
-    }
-
-    :global(body) {
-        background-image: url('/images/aridukacat.jpg');
-        background-size: 100% auto;
-        font-family: 'Comfortaa', cursive;
     }
 </style>
