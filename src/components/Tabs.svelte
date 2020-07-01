@@ -12,7 +12,7 @@
             <li on:click="{() => dispatch('tabChange', item)}">
                 <!--Conditional Class-->
                 <div class:active="{item === activeItem}" class="hover:text-white">
-                    <a href="{'/' + activeItem}">{item}</a>
+                    <a href="{'/' + activeItem}" rel="prefetch">{item}</a>
                 </div>
             </li>
         {/each}

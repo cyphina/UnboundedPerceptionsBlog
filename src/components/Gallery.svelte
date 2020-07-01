@@ -45,34 +45,32 @@
         </button>
     </div>
 
-    {#if bShowGalleryNav}
-        <div class="flex justify-end items-center absolute bottom-0 left-0 bg-opacity-50 bg-black w-full h-32">
-            {#each slides as slide, index (slide)}
-                <div class="relative overflow-hidden h-auto">
-                    {#if curImgIndex !== index}
-                        <img
-                            on:click="{() => {
-                                changeViewingImage(index);
-                                onGalleryPictureChange();
-                            }}"
-                            src="{slide}"
-                            alt="Missing"
-                            class="object-cover h-24 w-40 mx-2 cursor-pointer hover:opacity-75"
-                            in:fade="{{ duration: 300, easing: cubicInOut }}"
-                        />
-                    {/if}
-                </div>
-            {/each}
-        </div>
-    {/if}
+    <div
+        class="flex pl-1 pr-3 justify-end items-center absolute bottom-0 left-0 bg-opacity-50 bg-black w-full h-32"
+        style="opacity: {bShowGalleryNav ? 1 : 0}"
+    >
+        {#each slides as slide, index (slide)}
+            <div class="relative overflow-hidden h-auto">
+                {#if curImgIndex !== index}
+                    <img
+                        on:click="{() => {
+                            changeViewingImage(index);
+                            onGalleryPictureChange();
+                        }}"
+                        src="{slide}"
+                        alt="Missing"
+                        class="object-cover h-24 w-40 mx-2 cursor-pointer hover:opacity-75"
+                        in:fade="{{ duration: 300, easing: cubicInOut }}"
+                    />
+                {/if}
+            </div>
+        {/each}
+    </div>
+
 </div>
 
 <Modal title="Closer Up Image" bind:modalRef>
-    <img
-        src="{slides[curImgIndex]}"
-        alt="Missing"
-        class="object-cover h-full w-full"
-    />
+    <img src="{slides[curImgIndex]}" alt="Missing" class="object-cover h-full w-full" />
 </Modal>
 
 <style>
