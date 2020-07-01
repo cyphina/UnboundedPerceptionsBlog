@@ -8,7 +8,7 @@
 </script>
 
 <div
-    class="w-1/3 h-40 m-2 bg-indigo-900 hover:bg-opacity-100 bg-opacity-75 border-2 border-opacity-50 border-black
+    class="cardwidth m-2 h-40 bg-indigo-900 hover:bg-opacity-100 bg-opacity-75 border-2 border-opacity-50 border-black
     relative"
     transition:fade="{{ duration: 500 }}"
 >
@@ -26,5 +26,8 @@
         background-image: url('/images/flower.png');
         opacity: 0.25;
         pointer-events: none;
+    }
+    .cardwidth {
+        width: 31%;
     }
 </style>

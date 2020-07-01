@@ -1,7 +1,7 @@
 <div class ="m-2">
     <h1 class="text-red-500 text-2xl font-extrabold border-b border-red-500">Contact Zi Ha At...</h1>
     <address>
-        <ul class="mx-5 mt-2 list-decimal">
+        <ul class="mx-2 mt-2 list-decimal">
             <li>For friendly chat - cyphina@gmail.com</li>
             <li>For something business oriented - z.nam.ky.ha@gmail.com</li>
             <li>For something you want me to see 100% - Add Cyphina on Epic Games Launcher</li>

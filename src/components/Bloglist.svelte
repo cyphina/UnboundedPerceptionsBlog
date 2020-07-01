@@ -20,11 +20,11 @@
     }
 </script>
 
-<main class>
+<main class="mx-auto">
     <!-- Create a row in each column -->
-    <div class="flex flex-col cssAdjustHeight mb-2">
+    <div class="flex flex-col w-full h-auto mx-auto">
         {#each Array(postRows) as _, index}
-            <div class="flex flex-row justify-around">
+            <div class="flex flex-initial flex-row justify-start">
                 {#each posts.slice(index * postRows, (index + 1) * postRows) as post}
                     <Card title="{post.title}" summary="{post.summary}" link="{`/posts/${post.permalink}`}" />
                 {/each}
@@ -43,13 +43,13 @@
         {#each makePaginationNums() as index (index)}
             {#if index == pageNum}
                 <a href="Blog/?page={index}" sapper-noscroll>
-                    <div class="bg-indigo-400 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-1 shadow">
+                    <div class="bg-indigo-400 hover:bg-blue-400 text-pink-800 font-bold py-2 px-4 rounded-1 shadow">
                         {index}
                     </div>
                 </a>
             {:else}
                 <a href="Blog/?page={index}" sapper-noscroll>
-                    <div class="bg-indigo-400 hover:bg-blue-400 text-pink-800 font-bold py-2 px-4 rounded-1 shadow">
+                    <div class="bg-indigo-400 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-1 shadow">
                         {index}
                     </div>
                 </a>
@@ -66,9 +66,3 @@
 
     <div>Page {pageNum} out of {maxPageNum}</div>
 </main>
-
-<style>
-    .cssAdjustHeight {
-        height: 32em;
-    }
-</style>

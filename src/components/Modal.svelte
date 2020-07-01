@@ -47,18 +47,23 @@
 
     dialog {
         /** Center the modalRef window in the browser*/
-        position: absolute;
-        top: 0;
-        width: 100%;
+        position: fixed;
+        top: 50%;
+        width: auto;
         height: auto;
+        max-height: 95%;
+        transform: translate(0, -52.5%);
         border: none;
         box-shadow: 0 0 10px darkgray;
         padding: 0;
         margin: 1rem;
+        overflow-y: scroll;
     }
 
     header {
-        display: block;
+        position: sticky;
+        top: 0;
+        bottom: 0;
         background-color: black;
         box-sizing: border-box;
         color: white;
@@ -82,6 +87,5 @@
     dialog::backdrop,
     :global(dialog + .backdrop) {
         background: rgba(0, 0, 0, 0.4) !important; /* Used to override modalRef-polyfill.css */
-        overflow-y: initial;
     }
 </style>

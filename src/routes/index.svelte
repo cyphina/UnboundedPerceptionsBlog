@@ -9,6 +9,7 @@
     <h2 class="text-center text-2xl my-4">Welcome to my Site!</h2>
     <div class="mt-1 mb-4 mx-8 border-solid border border-gray-200">
         <Gallery {slides} />
+        <div class="text-center text-sm m-1">Hover and Click on the Gallery to Interact With it!</div>
     </div>
     <p>Hi it's Zi here.</p>
     <p>
@@ -23,6 +24,12 @@
         (albeit they may be buggy at the moment due to regressions) are listed here:
         <a href="https://github.com/cyphina/UnboundedPerceptions/blob/master/TestLevelDesign.docx">Test Plan</a>
     </p>
+    <p>
+        By the way, the background for this site is made by a Japanese artist known as AriDuka. If the page is large
+        enough, you can see the artist's id, but here's a link to their page:
+        <a href="https://twitter.com/13033303?lang=en">AriDuka's Twitter</a>
+    </p>
+
 </div>
 
 <style>

@@ -10,6 +10,23 @@ body {
     margin: 0;
 }
 
+* {
+    scrollbar-width: auto; /* "auto" or "thin"  */
+    scrollbar-color: #131414e1 #191d1f71; /* scroll thumb & track */
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+*::-webkit-scrollbar-track {
+    background: #131414e1;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #191d1f71;
+    border-radius: 20px;
+    border: 3px solid #191d1f71;
+}
+
 main {
     display: block;
 }
@@ -22,8 +39,11 @@ hr {
 
 a {
     background-color: transparent;
-    color: inherit;
+    color: #6d8ab1;
     text-decoration: inherit;
+}
+a:hover {
+    color: #258491;
 }
 
 b,
