@@ -8,7 +8,6 @@
     onMount(() => dialogPolyfill.registerDialog(modalRef)); // Life cycle function called when this component is added to the DOM
 
     function close() {
-        console.log('Close');
         modalRef.close();
     }
 

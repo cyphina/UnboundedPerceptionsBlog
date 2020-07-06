@@ -2,6 +2,7 @@
 title: Wee
 summary: Pee
 date: 2020-01-01
+slug: Test
 ---
 
 # Unbounded Peceptions

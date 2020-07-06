@@ -2,6 +2,7 @@
 title: The Beginning of a Journey
 summary: Today is a big change for me...
 date: 2020-06-26
+slug: TurningPoint
 ---
 # The beginning of sadness despite working hard
 Recently I have been quite demotivated, and forcing myself to study on the daily. Despite not seeing anybody I've done a lot of miserable things. I've ignored positivity directed towards me because I don't believe in myself.

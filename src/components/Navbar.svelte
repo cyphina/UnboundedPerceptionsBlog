@@ -16,7 +16,6 @@
     }
 
     function resetTab() {
-        console.log('Wee');
         activeItem = null;
     }
 </script>
