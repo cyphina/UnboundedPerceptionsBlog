@@ -1,34 +1,38 @@
 <script context="module">
     import { chunk } from '../utilityfunctions.js';
 
-    export function preload(page) {
+    export async function preload(page) {
         const index = +(page.query.page || 1);
         const MAX_POSTS_PER_PAGE = 9;
 
-        return this.fetch(`Blog.json`)
-            .then(r => r.json())
-            .then(posts => {
-                // Grab only a certain number of posts
-                const page = chunk(posts, MAX_POSTS_PER_PAGE)[index - 1];
-                // Sort posts by date
-                page.sort((a, b) => {
-                    if (a.date < b.date) {
-                        return 1;
-                    }
-                    if (a.date == b.date) {
-                        if (a.filename < b.filename) {
-                            return -1;
-                        } else return 0;
-                    }
-                    return -1;
+        try {
+            return await this.fetch(`Blog-Post.json`)
+                .then(r => r.json())
+                .then(posts => {
+                    // Grab only a certain number of posts
+                    const page = chunk(posts, MAX_POSTS_PER_PAGE)[index - 1];
+                    // Sort posts by date
+                    page.sort((a, b) => {
+                        if (a.date < b.date) {
+                            return 1;
+                        }
+                        if (a.date == b.date) {
+                            if (a.filename < b.filename) {
+                                return -1;
+                            } else return 0;
+                        }
+                        return -1;
+                    });
+                    return {
+                        page,
+                        hasMore: posts.length >= index + 1,
+                        pageNum: index,
+                        maxPageNum: Math.ceil(posts.length / MAX_POSTS_PER_PAGE),
+                    };
                 });
-                return {
-                    page,
-                    hasMore: posts.length >= index + 1,
-                    pageNum: index,
-                    maxPageNum: Math.ceil(posts.length / MAX_POSTS_PER_PAGE),
-                };
-            });
+        } catch (e) {
+            this.error(500, `Error fetching posts: ${e}`);
+        }
         // return {
         //     posts: post.pages[index - 1],
         //     hasMore: post.pages.length >= index + 1,
