@@ -1,6 +1,6 @@
 <script>
     import Gallery from '../components/Gallery.svelte';
-    import slides from '../../static/images/GameImages/*.png';
+    import slides from '../../static/images/GameImages/*.jpg';
 </script>
 
 <main class="m-2">

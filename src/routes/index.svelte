@@ -1,6 +1,6 @@
 <script>
     import Gallery from '../components/Gallery.svelte';
-    import slides from '../../static/images/MainPageGallery/*.png';
+    import slides from '../../static/images/MainPageGallery/*.jpg';
     import Tailwindcss from './Tailwindcss.svelte';
 
     import { onMount } from 'svelte';
@@ -19,9 +19,8 @@
 </script>
 
 <svelte:head>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js">
-
-    </script>
+    <title>Cyphina's Blog</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </svelte:head>
 
 <div class="mx-4">

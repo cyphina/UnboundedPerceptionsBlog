@@ -4,6 +4,8 @@
     import { cubicInOut } from 'svelte/easing';
     import Modal from './Modal.svelte';
 
+    import { onMount } from 'svelte';
+
     // Gallery vars
     const pictureOpacityStore = tweened(1, { duration: 300, easing: cubicInOut });
     export let slides = [];
@@ -26,6 +28,11 @@
         pictureOpacityStore.set(0, { duration: 0 });
         pictureOpacityStore.set(1, { duration: 1000, easing: cubicInOut });
     }
+
+    onMount(() => {
+        if (slides === undefined) {
+        }
+    });
 </script>
 
 <div
@@ -41,6 +48,7 @@
                 alt="Missing"
                 class="slide absolute top-0 object-cover h-full w-full"
                 style="opacity: {$pictureOpacityStore}"
+                loading="lazy"
             />
         </button>
     </div>
